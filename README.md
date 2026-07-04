@@ -1,11 +1,8 @@
 # Backend - Sistema de Gestão de Representação Comercial
 
-Este documento especifica a arquitetura de dados, os requisitos de negócio e os critérios de aceitação 
-técnicos para o motor de persistência e regras de negócio (Backend) do sistema. O projeto adota a arquitetura 
-**Monolith First**, isolando completamente as regras de domínio da interface do usuário (MVVM/Avalonia UI).
+Este documento especifica a arquitetura de dados, os requisitos de negócio e os critérios de aceitação técnicos para o motor de persistência e regras de negócio (Backend) do sistema. 
 
-O banco de dados utilizado é o **SQLite** em ambiente desktop, estruturado de forma estritamente relacional 
-(3NF) para garantir a consistência, eliminar a duplicidade de dados e otimizar a performance local.
+O projeto adota a abordagem **Monolith First**, estruturado como uma **Web API RESTful** em C# (.NET). O ecossistema de backend utiliza padrões inspirados em **DDD (Domain-Driven Design)** e **CQRS**, isolando completamente as complexidades e regras de domínio da interface do usuário. A comunicação com o frontend é realizada de forma desacoplada através de requisições HTTP e contratos JSON padronizados. O frontend é construído utilizando **Next.js** (com exportação estática) e encapsulado via **Tauri**. O banco de dados utilizado é o **SQLite** rodando localmente em ambiente desktop, estruturado de forma relacional para garantir a consistência, eliminar a duplicidade de dados e otimizar a performance local.
 
 ---
 
