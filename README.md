@@ -71,7 +71,6 @@ baseadas em `Guid` e Chaves Estrangeiras (`FK`) para integridade referencial.
 │   │
 │   ├── 📁 API/                     (Porta de Entrada - Camada de Apresentação RESTful)
 │   │   ├── 📁 Controllers/         (End-points HTTP e disparo do MediatR)
-│   │   └── 📄 Program.cs           (Configuração do Pipeline HTTP e Injeção de Dependências)
 │   │
 │   ├── 📁 Application/             (CQRS / MediatR / Validações)
 │   │   ├── 📁 Abstractions/        (Contratos globais da aplicação, ex: Messaging, IUnitOfWork)
