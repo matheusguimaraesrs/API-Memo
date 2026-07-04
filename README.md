@@ -69,23 +69,27 @@ baseadas em `Guid` e Chaves Estrangeiras (`FK`) para integridade referencial.
 ```
 ├── 📁 src/
 │   │
-│   ├── 📁 1.Domain/                (O Coração do Sistema - Sem dependências externas)
-│   │   ├── 📁 Entities/            (User, Sale, Customer, Installment...)
-│   │   ├── 📁 Enums/               (TypeSale...)
-│   │   ├── 📁 IRepositories/        (Interfaces de acesso a dados: ISaleRepository...)
+│   ├── 📁 API/                     (Porta de Entrada - Camada de Apresentação RESTful)
+│   │   ├── 📁 Controllers/         (End-points HTTP e disparo do MediatR)
+│   │   └── 📄 Program.cs           (Configuração do Pipeline HTTP e Injeção de Dependências)
 │   │
-│   ├── 📁 2.Application/           (A Ponte entre a UI e o Domínio)
-│   │   ├── 📁 Services/            (Implementação dos fluxos de caso de uso)
-│   │   └── 📁 Abstractions/        (Abstrações)
+│   ├── 📁 Application/             (CQRS / MediatR / Validações)
+│   │   ├── 📁 Abstractions/        (Contratos globais da aplicação, ex: Messaging, IUnitOfWork)
+│   │   └── 📁 Services/
+│   │       ├── 📁 Commands/        (Operações de Escrita: Create, Update, Delete contendo Command, Handler e Validator)
+│   │       └── 📁 Queries/         (Operações de Leitura: GetAll, GetById contendo Query, Handler e Responses)
 │   │
-│   ├── 📁 3.Infrastructure/        (Acesso ao Mundo Externo)
-│   │   ├── 📁 Data/                (Contexto do SQLite, Migrations, Repositories implementados)
-│   │   └── 📁 Security/            (Criptografia de senha do User, Logs)
+│   ├── 📁 Domain/                  (Regra de Negócio)
+│   │   ├── 📁 Entities/            (Seller, Sale, Customer, Product...)
+│   │   ├── 📁 Enums/               (Enums: TypeSale...)
+│   │   ├── 📁 Exceptions/          (Exceções de domínio customizadas, ex: DomainException)
+│   │   └── 📁 IRepositories/       (Interfaces dos repositórios: IRepositorySeller...)
 │   │
-│   └── 📁 4.Presentation/          (A Camada Avalonia UI)
-│       ├── 📁 Assets/              (Estilos, Imagens, Ícones)
-│       ├── 📁 Views/               (XAML das Telas: SaleView.axaml, CustomerView.axaml)
-│       └── 📁 ViewModels/          (Lógica da UI: SaleViewModel.cs, MainViewModel.cs)
+│   └── 📁 Infrastructure/          (Banco)
+│       ├── 📁 Data/
+│       │   ├── 📁 Context/         (Configurações do EF Core e o AppDbContext)
+│       │   └── 📁 Repositories/    (Implementação dos repositórios do Domínio)
+│       └── 📁 Services/            (Serviços de Infraestrutura: Criptografia, Segurança e Logs)
 ```
 
 ## 3. Requisitos de Negócio (Business Rules)
