@@ -1,24 +1,23 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "API\API.csproj", "{BFF37C79-EFB3-4FDF-BD28-1543FC1F59AE}"
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "src\API\API.csproj", "{BFF37C79-EFB3-4FDF-BD28-1543FC1F59AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{0FD3CBF2-06D8-409E-807B-7B79F5FA9F76}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "src\Application\Application.csproj", "{0FD3CBF2-06D8-409E-807B-7B79F5FA9F76}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{2C9BCB17-D872-4FC8-B08D-017BFD384AA0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "src\Domain\Domain.csproj", "{2C9BCB17-D872-4FC8-B08D-017BFD384AA0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{F4A2C466-A924-4B93-99B8-01C91EF90FD3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "src\Infrastructure\Infrastructure.csproj", "{F4A2C466-A924-4B93-99B8-01C91EF90FD3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{2A47B616-0154-4530-A9C5-390A582C99DA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{EF49B9FE-F62A-4563-A315-FB88CF67F39A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API.tests", "API.tests\API.tests.csproj", "{8F0DA49C-DA82-49E5-8BBF-016ABFE61579}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API.tests", "tests\API.tests\API.tests.csproj", "{8F0DA49C-DA82-49E5-8BBF-016ABFE61579}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application.tests", "Application.tests\Application.tests.csproj", "{24D4CA9D-E273-4C32-BC88-0A73D0BE4E6D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application.tests", "tests\Application.tests\Application.tests.csproj", "{24D4CA9D-E273-4C32-BC88-0A73D0BE4E6D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.tests", "Domain.tests\Domain.tests.csproj", "{DE09911B-C89C-4151-B2B5-44417FEBB547}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.tests", "tests\Domain.tests\Domain.tests.csproj", "{DE09911B-C89C-4151-B2B5-44417FEBB547}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.tests", "Infrastructure.tests\Infrastructure.tests.csproj", "{F63E33C0-5E8A-4A0E-A47F-5F636BE3E351}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.tests", "tests\Infrastructure.tests\Infrastructure.tests.csproj", "{F63E33C0-5E8A-4A0E-A47F-5F636BE3E351}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
