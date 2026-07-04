@@ -8,10 +8,12 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Abstractions\Messaging\" />
-      <Folder Include="Services\Commands\Create\" />
-      <Folder Include="Services\Commands\Delete\" />
-      <Folder Include="Services\Commands\Update\" />
+      <Folder Include="Services\Commands\Delete\Command\" />
+      <Folder Include="Services\Commands\Delete\Handler\" />
+      <Folder Include="Services\Commands\Delete\Validator\" />
+      <Folder Include="Services\Commands\Update\Command\" />
+      <Folder Include="Services\Commands\Update\Handler\" />
+      <Folder Include="Services\Commands\Update\Validator\" />
       <Folder Include="Services\Queries\GetAll\" />
       <Folder Include="Services\Queries\GetById\" />
       <Folder Include="Services\Queries\Responses\" />
@@ -21,6 +23,11 @@
       <PackageReference Include="FluentValidation" Version="12.1.1" />
       <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="12.1.1" />
       <PackageReference Include="MediatR" Version="14.1.0" />
+      <PackageReference Include="Microsoft.Extensions.Logging" Version="10.0.9" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Domain\Domain.csproj" />
     </ItemGroup>
 
 </Project>
